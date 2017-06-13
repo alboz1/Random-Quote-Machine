@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Arima+Madurai:400,700')
+$main-color: #566784
+$darkblue: #2b3544
+body
+  font-family: 'Arima Madurai', cursive
+  background: linear-gradient(#566784,#2b3544)
+  height: 100vh
+.container
+  padding: 50px 0
+.box
+  width: 550px
+  margin: 0 auto
+  padding: 30px
+  background: #dcdfe5
+  border-radius: 3px
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3)
+  overflow: hidden
+  p
+    margin: 0
+  .quote-wrapper
+    width: 450px
+    margin: 0 auto
+    padding: 20px 0
+    border-bottom: 1px solid rgba($main-color,.7)
+    display: flex
+    flex-direction: column
+    
+    .quote-txt
+      font-size: 25px
+      font-weight: bold
+      color: rgba(0,0,0,0.8)
+      margin-bottom: 30px
+      line-height: 1.4em
+      text-align: center
+
+    .author
+      @extend .quote-txt
+      font-size: 18px
+      font-weight: 400
+      align-self: flex-end
+ 
+.btn-wrapper
+  padding: 20px
+  display: flex
+  justify-content: space-between
+  a
+    text-decoration: none
+  .btn 
+    border: none
+    padding: 15px 20px
+    background: $main-color
+    border-radius: 3px
+    color: #fff
+    cursor: pointer
+    outline: none
+    transition: background 0.2s ease-in-out
+    &:hover
+      background: $darkblue
+    &:active
+      box-shadow: inset 0 0 10px rgba(0,0,0,0.7)
+    
+  i
+    position: relative
+    
+    &:hover .arrow
+      display: block
+      animation: animIn 0.3s cubic-bezier(.2,1.62,.95,1.13) forwards
+    .arrow
+      width: 0
+      height: 0
+      border-top: 14px solid transparent
+      border-bottom: 14px solid transparent
+      border-right: 14px solid $darkblue
+      position: absolute
+      top: 23%
+      right: -13px
+      display: none
+      
+      &:after
+        font-family: 'Arima Madurai', cursive
+        font-size: 15px
+        content: "Share this quote on twitter"
+        display: block
+        text-align: center
+        padding: 7px 5px
+        width: 185px
+        border-radius: 3px 
+        background: $darkblue
+        position: absolute
+        top: -15px
+        left: 7px
+@keyframes animIn 
+  from
+    transform: translateX(-100%)
+    opacity: 0
+  to
+    transform: translateX(0)
+    opacity: 1
+    
+    
+.fromTopQuote
+  animation: quoteAnim 1s cubic-bezier(.51,1.33,.13,1.02) forwards
+
+.authorAnim
+  animation: authorAnim 1s cubic-bezier(.51,1.33,.13,1.02) forwards
+@keyframes quoteAnim
+  0%
+    transform: translateY(-200%)
+  100%
+    transform: translateY(0)
+  
+@keyframes authorAnim
+  0%
+    transform: translateX(100%)
+  100%
+    transform: translateX(0)
+  
+  
+@media (max-width: 680px)
+  .container
+    padding: 0
+  .box
+    width: auto
+    margin: 0
+    
+    .quote-wrapper
+      width: 100%
+      

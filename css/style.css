@@ -1,0 +1,169 @@
+@import url("https://fonts.googleapis.com/css?family=Arima+Madurai:400,700");
+body {
+  font-family: 'Arima Madurai', cursive;
+  background: -webkit-gradient(linear, left top, left bottom, from(#566784), to(#2b3544));
+  background: linear-gradient(#566784, #2b3544);
+  height: 100vh; }
+
+.container {
+  padding: 50px 0; }
+
+.box {
+  width: 550px;
+  margin: 0 auto;
+  padding: 30px;
+  background: #dcdfe5;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  overflow: hidden; }
+  .box p {
+    margin: 0; }
+  .box .quote-wrapper {
+    width: 450px;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(86, 103, 132, 0.7);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    .box .quote-wrapper .quote-txt, .box .quote-wrapper .author {
+      font-size: 25px;
+      font-weight: bold;
+      color: rgba(0, 0, 0, 0.8);
+      margin-bottom: 30px;
+      line-height: 1.4em;
+      text-align: center; }
+    .box .quote-wrapper .author {
+      font-size: 18px;
+      font-weight: 400;
+      -ms-flex-item-align: end;
+          align-self: flex-end; }
+
+.btn-wrapper {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .btn-wrapper a {
+    text-decoration: none; }
+  .btn-wrapper .btn {
+    border: none;
+    padding: 15px 20px;
+    background: #566784;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    -webkit-transition: background 0.2s ease-in-out;
+    transition: background 0.2s ease-in-out; }
+    .btn-wrapper .btn:hover {
+      background: #2b3544; }
+    .btn-wrapper .btn:active {
+      -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7);
+              box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.7); }
+  .btn-wrapper i {
+    position: relative; }
+    .btn-wrapper i:hover .arrow {
+      display: block;
+      -webkit-animation: animIn 0.3s cubic-bezier(0.2, 1.62, 0.95, 1.13) forwards;
+              animation: animIn 0.3s cubic-bezier(0.2, 1.62, 0.95, 1.13) forwards; }
+    .btn-wrapper i .arrow {
+      width: 0;
+      height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-right: 14px solid #2b3544;
+      position: absolute;
+      top: 23%;
+      right: -13px;
+      display: none; }
+      .btn-wrapper i .arrow:after {
+        font-family: 'Arima Madurai', cursive;
+        font-size: 15px;
+        content: "Share this quote on twitter";
+        display: block;
+        text-align: center;
+        padding: 7px 5px;
+        width: 185px;
+        border-radius: 3px;
+        background: #2b3544;
+        position: absolute;
+        top: -15px;
+        left: 7px; }
+
+@-webkit-keyframes animIn {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes animIn {
+  from {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0; }
+  to {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 1; } }
+
+.fromTopQuote {
+  -webkit-animation: quoteAnim 1s cubic-bezier(0.51, 1.33, 0.13, 1.02) forwards;
+          animation: quoteAnim 1s cubic-bezier(0.51, 1.33, 0.13, 1.02) forwards; }
+
+.authorAnim {
+  -webkit-animation: authorAnim 1s cubic-bezier(0.51, 1.33, 0.13, 1.02) forwards;
+          animation: authorAnim 1s cubic-bezier(0.51, 1.33, 0.13, 1.02) forwards; }
+
+@-webkit-keyframes quoteAnim {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@keyframes quoteAnim {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%); }
+  100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); } }
+
+@-webkit-keyframes authorAnim {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@keyframes authorAnim {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%); }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); } }
+
+@media (max-width: 680px) {
+  .container {
+    padding: 0; }
+  .box {
+    width: auto;
+    margin: 0; }
+    .box .quote-wrapper {
+      width: 100%; } }
